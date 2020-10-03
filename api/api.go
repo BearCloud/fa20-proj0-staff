@@ -137,6 +137,7 @@ func signup(response http.ResponseWriter, request *http.Request) {
 
 	users = append(users, credentials)
 
+	response.WriteHeader(201)
 	return
 }
 
