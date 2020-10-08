@@ -304,7 +304,7 @@ func deleteUser(response http.ResponseWriter, request *http.Request) {
 
 	for i := 0; i < len(users); i++ {
 		if users[i].Username == credentials.Username &&  users[i].Password == credentials.Password {
-			remove(users, i)
+			users = remove(users, i)
 			return
 		}
 	}
